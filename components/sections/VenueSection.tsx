@@ -8,7 +8,7 @@ import PichwaiCorner from '@/components/ui/PichwaiCorner'
 
 export default function VenueSection() {
   return (
-    <section id="venue" className="py-28 px-6" style={{ background: 'var(--color-surface2)' }}>
+    <section id="venue" className="py-28 px-6 relative" style={{ background: 'var(--color-surface2)' }}>
       <FlowerOverlay />
       <div className="max-w-4xl mx-auto">
         <motion.div className="text-center mb-14" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>

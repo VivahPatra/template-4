@@ -32,7 +32,7 @@ export default function CountdownSection() {
   ]
 
   return (
-    <section id="countdown" className="py-28 px-6" style={{ background: 'var(--color-bg)' }}>
+    <section id="countdown" className="py-28 px-6 relative" style={{ background: 'var(--color-bg)' }}>
       <FlowerOverlay />
       <div className="max-w-4xl mx-auto">
         <motion.div className="text-center mb-14" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>

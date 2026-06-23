@@ -8,7 +8,7 @@ import PichwaiCorner from '@/components/ui/PichwaiCorner'
 
 export default function InvitationSection() {
   return (
-    <section id="invitation" className="py-28 px-6" style={{ background: 'var(--color-surface)' }}>
+    <section id="invitation" className="py-28 px-6 relative" style={{ background: 'var(--color-surface)' }}>
       <FlowerOverlay />
       <div className="max-w-3xl mx-auto">
         <motion.div
