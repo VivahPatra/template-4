@@ -110,7 +110,7 @@ export default function HeroSection() {
           className="font-serif italic text-lg md:text-2xl tracking-[0.3em] mb-4"
           style={{ color: 'var(--color-accent)', opacity: 0.7 }}
         >
-          weds
+          {weddingData.heroSubtitle || 'weds'}
         </motion.p>
 
         <motion.h1

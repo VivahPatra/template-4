@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { useWeddingData } from '@/context/WeddingDataContext'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
+import { formatShortDate } from '@/lib/utils'
 import LotusDivider from '@/components/ui/LotusDivider'
 import PichwaiCorner from '@/components/ui/PichwaiCorner'
 
@@ -17,10 +18,10 @@ export default function InvitationSection() {
           variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}
         >
           <motion.p variants={fadeUp} className="font-sans text-xs tracking-[0.4em] uppercase mb-4 glow-pulse" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>
-            <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} /> &nbsp; Shubh Vivah &nbsp; <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} />
+            <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} /> &nbsp; {weddingData.invitationSubtitle || 'Shubh Vivah'} &nbsp; <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} />
           </motion.p>
           <motion.h2 variants={fadeUp} className="font-display shimmer-text" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)' }}>
-            The Invitation
+            {weddingData.invitationHeading || 'The Invitation'}
           </motion.h2>
           <LotusDivider className="mt-6" />
         </motion.div>
@@ -52,7 +53,7 @@ export default function InvitationSection() {
                 <img src="/assets/ganesha.gif" alt="Ganesha" className="ganesha-glow" style={{ width: 58, height: 'auto', position: 'relative', zIndex: 1 }} />
               </div>
               <p className="font-sans text-xs tracking-[0.3em] uppercase mt-2 glow-pulse" style={{ color: 'var(--color-accent)', opacity: 0.6 }}>
-                ॥ Shree Ganeshaya Namah ॥
+                {weddingData.invitationBlessing || '॥ Shree Ganeshaya Namah ॥'}
               </p>
             </div>
 
@@ -102,7 +103,7 @@ export default function InvitationSection() {
             </p>
             <LotusDivider className="my-8" />
             <p className="font-sans text-sm tracking-widest uppercase" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>
-              20 December 2026
+              {formatShortDate(weddingData.weddingDate)}
             </p>
           </div>
         </motion.div>

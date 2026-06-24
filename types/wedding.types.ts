@@ -40,7 +40,14 @@ export interface WeddingConfig {
   weddingDate: Date
   hashtag: string
   tagline: string
+  heroSubtitle?: string
+  invitationHeading?: string
+  invitationSubtitle?: string
+  invitationBlessing?: string
   invitationText: string
+  rsvpHeading?: string
+  rsvpText?: string
+  rsvpDeadline?: string
   heroImage: string
   events: WeddingEvent[]
   galleryImages: GalleryImage[]
@@ -50,4 +57,5 @@ export interface WeddingConfig {
   venue: { name: string; address: string; mapUrl: string }
   rsvp: { whatsappNumber: string; message: string; deadline: string }
   socialLinks?: { instagram?: string }
+  infoCards?: Array<{ icon: string; title: string; description: string }>
 }
