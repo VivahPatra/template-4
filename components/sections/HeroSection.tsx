@@ -3,6 +3,8 @@ import { useRef } from 'react'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
+import EditableText from '@/components/ui/EditableText'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 import PichwaiCorner from '@/components/ui/PichwaiCorner'
 import LotusPond from '@/components/ui/LotusPond'
@@ -10,6 +12,8 @@ import { formatShortDate } from '@/lib/utils'
 
 export default function HeroSection() {
   const weddingData = useWeddingData()
+  const { isEditing, data: editData } = useEditMode()
+  const d = isEditing ? editData : weddingData
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
 
@@ -96,7 +100,7 @@ export default function HeroSection() {
           className="shimmer-text font-display leading-none"
           style={{ fontSize: 'clamp(2.4rem, 9vw, 6.4rem)', letterSpacing: '0.06em' }}
         >
-          {weddingData.brideName}
+          <EditableText field="brideName">{d.brideName}</EditableText>
         </motion.h1>
 
         <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 my-4">
@@ -118,13 +122,13 @@ export default function HeroSection() {
           className="shimmer-text font-display leading-none"
           style={{ fontSize: 'clamp(2.4rem, 9vw, 6.4rem)', letterSpacing: '0.06em' }}
         >
-          {weddingData.groomName}
+          <EditableText field="groomName">{d.groomName}</EditableText>
         </motion.h1>
 
         <motion.div variants={fadeUp} className="flex flex-col items-center gap-2 mt-6">
           <div className="h-px w-20 opacity-35" style={{ background: 'var(--color-accent)' }} />
           <p className="font-sans text-xs tracking-[0.4em] uppercase mt-1" style={{ color: 'var(--color-accent)', opacity: 0.75 }}>
-            {formatShortDate(weddingData.weddingDate)}
+            {formatShortDate(d.weddingDate)}
           </p>
           <div className="h-px w-20 opacity-35" style={{ background: 'var(--color-accent)' }} />
         </motion.div>
@@ -134,7 +138,7 @@ export default function HeroSection() {
           className="font-serif italic mt-3 text-sm md:text-base opacity-45 tracking-wider"
           style={{ color: 'var(--color-text)' }}
         >
-          {weddingData.tagline}
+          <EditableText field="tagline">{d.tagline}</EditableText>
         </motion.p>
       </motion.div>
 

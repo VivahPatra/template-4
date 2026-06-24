@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { motion } from 'framer-motion'
 import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
+import EditableText from '@/components/ui/EditableText'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 
@@ -18,12 +20,14 @@ function getTimeLeft(target: Date) {
 
 export default function CountdownSection() {
   const weddingData = useWeddingData()
-  const [time, setTime] = useState(() => getTimeLeft(weddingData.weddingDate))
+  const { isEditing, data: editData } = useEditMode()
+  const d = isEditing ? editData : weddingData
+  const [time, setTime] = useState(() => getTimeLeft(d.weddingDate))
 
   useEffect(() => {
-    const id = setInterval(() => setTime(getTimeLeft(weddingData.weddingDate)), 1000)
+    const id = setInterval(() => setTime(getTimeLeft(d.weddingDate)), 1000)
     return () => clearInterval(id)
-  }, [weddingData.weddingDate])
+  }, [d.weddingDate])
 
   const units = [
     { label: 'Days',    value: time.days },
@@ -85,7 +89,7 @@ export default function CountdownSection() {
           whileInView={{ opacity: 0.5 }}
           viewport={{ once: true }}
         >
-          {weddingData.tagline}
+          <EditableText field="tagline">{d.tagline}</EditableText>
         </motion.p>
       </div>
     </section>

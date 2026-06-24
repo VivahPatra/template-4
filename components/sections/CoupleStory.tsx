@@ -2,11 +2,15 @@
 import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
+import EditableText from '@/components/ui/EditableText'
 import { fadeUp, slideLeft, slideRight, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 
 export default function CoupleStory() {
   const weddingData = useWeddingData()
+  const { isEditing, data: editData } = useEditMode()
+  const d = isEditing ? editData : weddingData
   return (
     <section id="story" className="py-28 px-6 relative" style={{ background: 'var(--color-surface)' }}>
       <FlowerOverlay />
@@ -27,7 +31,7 @@ export default function CoupleStory() {
           <div className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-px hidden md:block" style={{ background: 'linear-gradient(to bottom, transparent, var(--color-accent), transparent)', opacity: 0.3 }} />
 
           <div className="space-y-16">
-            {weddingData.coupleStory.map((milestone, idx) => {
+            {d.coupleStory.map((milestone, idx) => {
               const isLeft = idx % 2 === 0
               return (
                 <motion.div
@@ -54,9 +58,15 @@ export default function CoupleStory() {
                       </motion.div>
                     )}
                     {/* Text */}
-                    <p className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-accent)', opacity: 0.65 }}>{milestone.date}</p>
-                    <h3 className="font-display text-2xl mb-2 glow-text" style={{ color: 'var(--color-accent)' }}>{milestone.title}</h3>
-                    <p className="font-serif text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>{milestone.description}</p>
+                    <p className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-accent)', opacity: 0.65 }}>
+                      <EditableText field="date" index={idx} arrayField="coupleStory">{milestone.date}</EditableText>
+                    </p>
+                    <h3 className="font-display text-2xl mb-2 glow-text" style={{ color: 'var(--color-accent)' }}>
+                      <EditableText field="title" index={idx} arrayField="coupleStory">{milestone.title}</EditableText>
+                    </h3>
+                    <p className="font-serif text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
+                      <EditableText field="description" index={idx} arrayField="coupleStory" multiline>{milestone.description}</EditableText>
+                    </p>
                   </div>
 
                   {/* Timeline node */}
