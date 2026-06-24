@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { WeddingDataProvider } from '@/context/WeddingDataContext'
-import { EditModeProvider } from '@/context/EditModeContext'
 import CustomCursor from '@/components/layout/CustomCursor'
 import LoadingScreen from '@/components/layout/LoadingScreen'
 import FloatingFABs from '@/components/layout/FloatingFABs'
@@ -27,58 +26,56 @@ export default function Page() {
 
   return (
     <WeddingDataProvider>
-      <EditModeProvider>
-        <CustomCursor />
-        <AnimatePresence>
-          {!loaded && <LoadingScreen key="loading" onComplete={() => setLoaded(true)} />}
-        </AnimatePresence>
-        {loaded && (
-          <>
-            <FloralPetals count={20} />
-            <FloatingFABs />
-            <div className="relative overflow-x-hidden">
+      <CustomCursor />
+      <AnimatePresence>
+        {!loaded && <LoadingScreen key="loading" onComplete={() => setLoaded(true)} />}
+      </AnimatePresence>
+      {loaded && (
+        <>
+          <FloralPetals count={20} />
+          <FloatingFABs />
+          <div className="relative overflow-x-hidden">
 
-              <main>
-                <HeroSection />
-                <LotusPondStrip bgColor="var(--color-bg)" lotusImage={LOTUS_IMAGE} />
-                <LotusWaveDivider fromColor="var(--color-bg)" toColor="var(--color-surface)" />
-                <ShowerDivider />
+            <main>
+              <HeroSection />
+              <LotusPondStrip bgColor="var(--color-bg)" lotusImage={LOTUS_IMAGE} />
+              <LotusWaveDivider fromColor="var(--color-bg)" toColor="var(--color-surface)" />
+              <ShowerDivider />
 
-                <InvitationSection />
-                <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
-                <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface2)" />
-                <ShowerDivider />
+              <InvitationSection />
+              <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
+              <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface2)" />
+              <ShowerDivider />
 
-                <EventsSection />
-                <LotusPondStrip bgColor="var(--color-surface2)" lotusImage={LOTUS_IMAGE} />
-                <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
-                <ShowerDivider />
+              <EventsSection />
+              <LotusPondStrip bgColor="var(--color-surface2)" lotusImage={LOTUS_IMAGE} />
+              <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
+              <ShowerDivider />
 
-                <CoupleStory />
-                <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
-                <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface2)" />
-                <ShowerDivider />
+              <CoupleStory />
+              <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
+              <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface2)" />
+              <ShowerDivider />
 
-                <GallerySection />
-                <LotusPondStrip bgColor="var(--color-surface2)" lotusImage={LOTUS_IMAGE} />
-                <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
-                <ShowerDivider />
+              <GallerySection />
+              <LotusPondStrip bgColor="var(--color-surface2)" lotusImage={LOTUS_IMAGE} />
+              <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
+              <ShowerDivider />
 
-                <RSVPSection />
-                <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
-                <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-bg)" />
-                <ShowerDivider />
+              <RSVPSection />
+              <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
+              <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-bg)" />
+              <ShowerDivider />
 
-                <CountdownSection />
-                <LotusPondStrip bgColor="var(--color-bg)" lotusImage={LOTUS_IMAGE} />
-                <LotusWaveDivider fromColor="var(--color-bg)" toColor="var(--color-surface2)" />
+              <CountdownSection />
+              <LotusPondStrip bgColor="var(--color-bg)" lotusImage={LOTUS_IMAGE} />
+              <LotusWaveDivider fromColor="var(--color-bg)" toColor="var(--color-surface2)" />
 
-                <FooterSection />
-              </main>
-            </div>
-          </>
-        )}
-      </EditModeProvider>
+              <FooterSection />
+            </main>
+          </div>
+        </>
+      )}
     </WeddingDataProvider>
   )
 }

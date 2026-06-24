@@ -2,16 +2,12 @@
 import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { useWeddingData } from '@/context/WeddingDataContext'
-import { useEditMode } from '@/context/EditModeContext'
-import EditableText from '@/components/ui/EditableText'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 import PichwaiCorner from '@/components/ui/PichwaiCorner'
 
 export default function VenueSection() {
   const weddingData = useWeddingData()
-  const { isEditing, data: editData } = useEditMode()
-  const d = isEditing ? editData : weddingData
   return (
     <section id="venue" className="py-28 px-6 relative" style={{ background: 'var(--color-surface2)' }}>
       <FlowerOverlay />
@@ -39,12 +35,8 @@ export default function VenueSection() {
           {/* Header */}
           <div className="py-12 px-8 text-center" style={{ background: 'linear-gradient(135deg, var(--color-surface2), var(--color-surface))' }}>
             <div className="text-5xl mb-4 float-slow">🏛️</div>
-            <h3 className="font-display text-3xl glow-text mb-2" style={{ color: 'var(--color-accent)' }}>
-              <EditableText field="venue.name">{d.venue.name}</EditableText>
-            </h3>
-            <p className="font-sans text-sm" style={{ color: 'var(--color-muted)' }}>
-              <EditableText field="venue.address">{d.venue.address}</EditableText>
-            </p>
+            <h3 className="font-display text-3xl glow-text mb-2" style={{ color: 'var(--color-accent)' }}>{weddingData.venue.name}</h3>
+            <p className="font-sans text-sm" style={{ color: 'var(--color-muted)' }}>{weddingData.venue.address}</p>
           </div>
 
           {/* Events at venue */}
@@ -53,7 +45,7 @@ export default function VenueSection() {
               Events at this Venue
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-6">
-              {d.events.filter(e => e.venue === d.venue.name).map(e => (
+              {weddingData.events.filter(e => e.venue === weddingData.venue.name).map(e => (
                 <a
                   key={e.id}
                   href={`https://maps.google.com/?q=${encodeURIComponent(e.venue + ', ' + e.venueAddress)}`}
@@ -75,7 +67,7 @@ export default function VenueSection() {
 
             <div className="text-center">
               <motion.a
-                href={d.venue.mapUrl}
+                href={weddingData.venue.mapUrl}
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-3 rounded-full font-sans text-sm font-semibold tracking-wider uppercase"
                 style={{ background: 'var(--color-accent)', color: '#080f1a', boxShadow: '0 0 24px rgba(200,146,42,0.4)' }}
@@ -93,7 +85,7 @@ export default function VenueSection() {
           className="mt-8 flex flex-wrap justify-center gap-5"
           variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}
         >
-          {d.events.filter(e => e.venue !== d.venue.name).map(e => (
+          {weddingData.events.filter(e => e.venue !== weddingData.venue.name).map(e => (
             <motion.a
               key={e.id} variants={fadeUp}
               href={`https://maps.google.com/?q=${encodeURIComponent(e.venue + ', ' + e.venueAddress)}`}

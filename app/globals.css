@@ -107,20 +107,3 @@ body { cursor: none; }
 .ganesha-backdrop {
   animation: ganeshBackdrop 2.5s ease-in-out infinite;
 }
-
-/* ── Editable highlight (inline WYSIWYG) ─── */
-.editable-highlight {
-  position: relative;
-  outline: none;
-  border-bottom: 1px dashed rgba(200, 146, 42, 0.5);
-  transition: border-color 0.2s, background-color 0.2s;
-}
-.editable-highlight:hover {
-  border-bottom-color: rgba(200, 146, 42, 0.8);
-  background-color: rgba(200, 146, 42, 0.06);
-}
-.editable-highlight:focus {
-  border-bottom-color: var(--color-accent);
-  background-color: rgba(200, 146, 42, 0.1);
-  box-shadow: 0 2px 8px rgba(200, 146, 42, 0.15);
-}

@@ -2,16 +2,12 @@
 import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { useWeddingData } from '@/context/WeddingDataContext'
-import { useEditMode } from '@/context/EditModeContext'
-import EditableText from '@/components/ui/EditableText'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 import PichwaiCorner from '@/components/ui/PichwaiCorner'
 
 export default function InvitationSection() {
   const weddingData = useWeddingData()
-  const { isEditing, data: editData } = useEditMode()
-  const d = isEditing ? editData : weddingData
   return (
     <section id="invitation" className="py-28 px-6 relative" style={{ background: 'var(--color-surface)' }}>
       <FlowerOverlay />
@@ -71,20 +67,20 @@ export default function InvitationSection() {
             </svg>
 
             <h3 className="shimmer-text font-display" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)', lineHeight: 1 }}>
-              <EditableText field="brideName">{d.brideName}</EditableText>
+              {weddingData.brideName}
             </h3>
-            {d.brideParents && (
+            {weddingData.brideParents && (
               <p className="font-sans text-xs tracking-wide mt-1 mb-2" style={{ color: 'var(--color-muted)', opacity: 0.7 }}>
-                Daughter of <EditableText field="brideParents">{d.brideParents}</EditableText>
+                Daughter of {weddingData.brideParents}
               </p>
             )}
             <p className="font-serif italic text-xl mt-2 mb-2" style={{ color: 'var(--color-accent)', opacity: 0.65 }}>&amp;</p>
             <h3 className="shimmer-text font-display" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)', lineHeight: 1 }}>
-              <EditableText field="groomName">{d.groomName}</EditableText>
+              {weddingData.groomName}
             </h3>
-            {d.groomParents && (
+            {weddingData.groomParents && (
               <p className="font-sans text-xs tracking-wide mt-1" style={{ color: 'var(--color-muted)', opacity: 0.7 }}>
-                Son of <EditableText field="groomParents">{d.groomParents}</EditableText>
+                Son of {weddingData.groomParents}
               </p>
             )}
 
@@ -102,7 +98,7 @@ export default function InvitationSection() {
           {/* Invitation text */}
           <div className="px-10 py-10 text-center">
             <p className="font-serif text-base leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-              <EditableText field="invitationText" multiline>{d.invitationText}</EditableText>
+              {weddingData.invitationText}
             </p>
             <LotusDivider className="my-8" />
             <p className="font-sans text-sm tracking-widest uppercase" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>

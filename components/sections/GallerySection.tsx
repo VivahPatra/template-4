@@ -4,7 +4,6 @@ import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
 import { useWeddingData } from '@/context/WeddingDataContext'
-import { useEditMode } from '@/context/EditModeContext'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 
@@ -16,8 +15,6 @@ function imgWidth(span: string | undefined) {
 
 export default function GallerySection() {
   const weddingData = useWeddingData()
-  const { isEditing, data: editData } = useEditMode()
-  const d = isEditing ? editData : weddingData
   const [selected, setSelected] = useState<string | null>(null)
 
   return (
@@ -49,7 +46,7 @@ export default function GallerySection() {
           className="flex gap-4"
           style={{ width: 'max-content', animation: 'galleryScroll 30s linear infinite' }}
         >
-          {[...d.galleryImages, ...d.galleryImages].map((img, i) => (
+          {[...weddingData.galleryImages, ...weddingData.galleryImages].map((img, i) => (
             <div
               key={i}
               data-cursor-glow
