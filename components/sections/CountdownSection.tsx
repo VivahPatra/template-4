@@ -63,7 +63,7 @@ export default function CountdownSection() {
 
               <motion.p
                 className="font-display"
-                style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', lineHeight: 1, color: '#c8683a' }}
+                style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', lineHeight: 1, color: '#fdf0d5' }}
                 key={value}
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
