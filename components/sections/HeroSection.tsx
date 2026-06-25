@@ -38,7 +38,7 @@ export default function HeroSection() {
           transition={{ duration: 2.5, delay: 2, ease: [0.16, 1, 0.3, 1] }}
         >
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div className="ganesha-backdrop" style={{ position: 'absolute', inset: '-15%', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,210,80,0.6) 0%, rgba(201,168,76,0.25) 50%, transparent 75%)', filter: 'blur(20px)' }} />
+            <div className="ganesha-backdrop" style={{ position: 'absolute', inset: '-15%', borderRadius: '50%', background: 'radial-gradient(circle, rgba(136,14,79,0.4) 0%, rgba(232,130,90,0.25) 50%, transparent 75%)', filter: 'blur(20px)' }} />
             <img src="/assets/sriji.png" alt="" className="ganesha-glow" style={{ width: '100%', height: 'auto', position: 'relative', zIndex: 1 }} />
           </div>
         </motion.div>
@@ -54,7 +54,7 @@ export default function HeroSection() {
           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
         />
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(180deg, rgba(8,15,26,0.7) 0%, rgba(8,15,26,0.35) 35%, rgba(8,15,26,0.6) 75%, rgba(8,15,26,0.95) 100%)'
+          background: 'linear-gradient(180deg, rgba(255,248,244,0.7) 0%, rgba(255,248,244,0.3) 35%, rgba(255,248,244,0.5) 75%, rgba(255,248,244,0.95) 100%)'
         }} />
       </motion.div>
 
@@ -70,15 +70,15 @@ export default function HeroSection() {
 
       {/* Ambient glow orbs */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
-        <div className="absolute rounded-full blur-[180px]" style={{ width: 500, height: 400, background: 'rgba(200,146,42,0.07)', top: '5%', left: '-8%' }} />
-        <div className="absolute rounded-full blur-[140px]" style={{ width: 400, height: 300, background: 'rgba(139,26,26,0.08)', top: '20%', right: '-5%' }} />
-        <div className="absolute rounded-full blur-[120px]" style={{ width: 350, height: 350, background: 'rgba(26,107,68,0.06)', bottom: '25%', left: '30%' }} />
+        <div className="absolute rounded-full blur-[180px]" style={{ width: 500, height: 400, background: 'rgba(136,14,79,0.1)', top: '5%', left: '-8%' }} />
+        <div className="absolute rounded-full blur-[140px]" style={{ width: 400, height: 300, background: 'rgba(232,130,90,0.12)', top: '20%', right: '-5%' }} />
+        <div className="absolute rounded-full blur-[120px]" style={{ width: 350, height: 350, background: 'rgba(216,27,96,0.08)', bottom: '25%', left: '30%' }} />
       </div>
 
       {/* ═══ 1. Sriji — small, with glow ═══ */}
       <motion.div className="relative z-10 flex justify-center mb-4" style={{ y: srijiY, opacity }}>
         <div style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div className="ganesha-backdrop" style={{ position: 'absolute', inset: -10, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,210,80,0.6) 0%, rgba(201,168,76,0.25) 50%, transparent 75%)', filter: 'blur(14px)' }} />
+          <div className="ganesha-backdrop" style={{ position: 'absolute', inset: -10, borderRadius: '50%', background: 'radial-gradient(circle, rgba(136,14,79,0.4) 0%, rgba(232,130,90,0.25) 50%, transparent 75%)', filter: 'blur(14px)' }} />
           <img src="/assets/sriji.png" alt="" className="ganesha-glow" style={{ width: 140, height: 'auto', position: 'relative', zIndex: 1 }} />
         </div>
       </motion.div>
