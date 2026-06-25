@@ -12,25 +12,25 @@
 }
 
 :root {
-  /* Baby Pink & Light Green — soft pastel floral */
-  --color-bg:        #fff5f5;   /* baby pink tint */
-  --color-surface:   #f0f8f0;   /* light green tint */
-  --color-surface2:  #ffeef0;   /* soft pink */
-  --color-surface3:  #e8f5e8;   /* sage green */
+  /* Fuchsia Pink & Peach */
+  --color-bg:        #fff8f4;   /* warm peach tint */
+  --color-surface:   #fce4ec;   /* soft fuchsia pink */
+  --color-surface2:  #ffecd8;   /* peach */
+  --color-surface3:  #f8d0da;   /* deeper pink */
 
-  --color-accent:    #d4707a;   /* rose pink */
-  --color-accent2:   #5a9a6a;   /* soft green */
-  --color-accent3:   #e89098;   /* light rose */
-  --color-accent4:   #3a8a5a;   /* deeper green */
+  --color-accent:    #c2185b;   /* fuchsia pink */
+  --color-accent2:   #e8825a;   /* warm peach */
+  --color-accent3:   #e91e63;   /* bright fuchsia */
+  --color-accent4:   #d4704a;   /* deep peach */
 
-  --color-text:      #2a1820;   /* dark plum brown */
-  --color-muted:     #8a7078;   /* dusty rose gray */
-  --color-border:    rgba(212, 112, 122, 0.2);
-  --color-border-strong: rgba(212, 112, 122, 0.4);
+  --color-text:      #2a1018;   /* dark wine */
+  --color-muted:     #8a6070;   /* dusty fuchsia */
+  --color-border:    rgba(194, 24, 91, 0.18);
+  --color-border-strong: rgba(194, 24, 91, 0.35);
 
-  --color-glow:      rgba(212, 112, 122, 0.1);
-  --color-glow-strong: rgba(212, 112, 122, 0.25);
-  --color-glow-lotus: rgba(90, 154, 106, 0.3);
+  --color-glow:      rgba(194, 24, 91, 0.1);
+  --color-glow-strong: rgba(194, 24, 91, 0.25);
+  --color-glow-lotus: rgba(232, 130, 90, 0.3);
 }
 
 /* ── Keyframes ─────────────────────────────────────────────── */
@@ -60,11 +60,11 @@
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    #d4707a 0%,
-    #e89098 25%,
-    #5a9a6a 50%,
-    #e89098 75%,
-    #d4707a 100%
+    #c2185b 0%,
+    #e8825a 30%,
+    #c2185b 50%,
+    #e8825a 70%,
+    #c2185b 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
