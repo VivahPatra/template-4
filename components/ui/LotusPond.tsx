@@ -52,7 +52,7 @@ export default function LotusPond({ className = '' }: { className?: string; lotu
         <motion.div
           key={`water-line-${i}`}
           className="absolute left-0 right-0 h-px"
-          style={{ top: `${pct}%`, background: 'linear-gradient(to right, transparent, rgba(200,146,42,0.12), transparent)' }}
+          style={{ top: `${pct}%`, background: 'linear-gradient(to right, transparent, rgba(100,180,220,0.3), transparent)' }}
           animate={{ scaleX: [0.8, 1.05, 0.8], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 4 + i * 0.8, repeat: Infinity, delay: i * 0.5, ease: 'easeInOut' }}
         />

@@ -8,7 +8,7 @@ import LotusDivider from '@/components/ui/LotusDivider'
 export default function CoupleStory() {
   const weddingData = useWeddingData()
   return (
-    <section id="story" className="py-28 px-6 relative" style={{ background: 'var(--color-surface)' }}>
+    <section id="story" className="py-28 px-6 relative on-pink" style={{ background: 'var(--color-surface)' }}>
       <FlowerOverlay />
       <div className="max-w-5xl mx-auto">
         <motion.div className="text-center mb-14" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>

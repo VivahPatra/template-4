@@ -40,49 +40,49 @@ export default function Page() {
             <main>
               <SectionGate name="hero">
                 <HeroSection />
-                <LotusPondStrip bgColor="var(--color-bg)" lotusImage={LOTUS_IMAGE} />
+                <LotusPondStrip bgColor="#b3ddf0" lotusImage={LOTUS_IMAGE} />
                 <LotusWaveDivider fromColor="var(--color-bg)" toColor="var(--color-surface)" />
                 <ShowerDivider />
               </SectionGate>
 
               <SectionGate name="invitation">
                 <InvitationSection />
-                <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
+                <LotusPondStrip bgColor="#a8d8ea" lotusImage={LOTUS_IMAGE} />
                 <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface2)" />
                 <ShowerDivider />
               </SectionGate>
 
               <SectionGate name="events">
                 <EventsSection />
-                <LotusPondStrip bgColor="var(--color-surface2)" lotusImage={LOTUS_IMAGE} />
+                <LotusPondStrip bgColor="#b3ddf0" lotusImage={LOTUS_IMAGE} />
                 <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
                 <ShowerDivider />
               </SectionGate>
 
               <SectionGate name="coupleStory">
                 <CoupleStory />
-                <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
+                <LotusPondStrip bgColor="#a8d8ea" lotusImage={LOTUS_IMAGE} />
                 <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface2)" />
                 <ShowerDivider />
               </SectionGate>
 
               <SectionGate name="gallery">
                 <GallerySection />
-                <LotusPondStrip bgColor="var(--color-surface2)" lotusImage={LOTUS_IMAGE} />
+                <LotusPondStrip bgColor="#b3ddf0" lotusImage={LOTUS_IMAGE} />
                 <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
                 <ShowerDivider />
               </SectionGate>
 
               <SectionGate name="rsvp">
                 <RSVPSection />
-                <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
+                <LotusPondStrip bgColor="#a8d8ea" lotusImage={LOTUS_IMAGE} />
                 <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-bg)" />
                 <ShowerDivider />
               </SectionGate>
 
               <SectionGate name="countdown">
                 <CountdownSection />
-                <LotusPondStrip bgColor="var(--color-bg)" lotusImage={LOTUS_IMAGE} />
+                <LotusPondStrip bgColor="#b3ddf0" lotusImage={LOTUS_IMAGE} />
                 <LotusWaveDivider fromColor="var(--color-bg)" toColor="var(--color-surface2)" />
               </SectionGate>
 
