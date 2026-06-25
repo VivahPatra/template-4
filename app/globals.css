@@ -14,23 +14,23 @@
 :root {
   /* Fuchsia Pink & Peach */
   --color-bg:        #fff8f4;   /* warm peach tint */
-  --color-surface:   #d81b60;   /* deep fuchsia — 3 shades darker */
-  --color-surface2:  #ffecd8;   /* peach */
-  --color-surface3:  #ad1457;   /* darkest fuchsia */
+  --color-surface:   #e91e63;   /* fuchsia — 2 shades lighter */
+  --color-surface2:  #e8c8a8;   /* darker peach */
+  --color-surface3:  #c2185b;   /* mid fuchsia */
 
-  --color-accent:    #880e4f;   /* deep fuchsia — 3 shades darker */
-  --color-accent2:   #e8825a;   /* warm peach */
-  --color-accent3:   #ad1457;   /* rich fuchsia */
-  --color-accent4:   #d4704a;   /* deep peach */
+  --color-accent:    #c2185b;   /* fuchsia — 2 shades lighter */
+  --color-accent2:   #c8683a;   /* dark peach — 2 shades darker */
+  --color-accent3:   #d81b60;   /* bright fuchsia */
+  --color-accent4:   #a85030;   /* deep burnt peach */
 
   --color-text:      #2a1018;   /* dark wine */
   --color-muted:     #8a6070;   /* dusty fuchsia */
-  --color-border:    rgba(136, 14, 79, 0.2);
-  --color-border-strong: rgba(136, 14, 79, 0.4);
+  --color-border:    rgba(194, 24, 91, 0.2);
+  --color-border-strong: rgba(194, 24, 91, 0.4);
 
-  --color-glow:      rgba(136, 14, 79, 0.1);
-  --color-glow-strong: rgba(136, 14, 79, 0.3);
-  --color-glow-lotus: rgba(232, 130, 90, 0.3);
+  --color-glow:      rgba(194, 24, 91, 0.1);
+  --color-glow-strong: rgba(194, 24, 91, 0.3);
+  --color-glow-lotus: rgba(200, 104, 58, 0.3);
 }
 
 /* ── Keyframes ─────────────────────────────────────────────── */
@@ -60,11 +60,11 @@
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    #880e4f 0%,
-    #e8825a 30%,
-    #880e4f 50%,
-    #e8825a 70%,
-    #880e4f 100%
+    #c2185b 0%,
+    #c8683a 30%,
+    #c2185b 50%,
+    #c8683a 70%,
+    #c2185b 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
