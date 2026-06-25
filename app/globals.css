@@ -12,25 +12,25 @@
 }
 
 :root {
-  /* Pichwai — deep indigo night, gold ornaments, lotus & peacock */
-  --color-bg:        #080f1a;
-  --color-surface:   #0e1c2f;
-  --color-surface2:  #061020;
-  --color-surface3:  #132240;
+  /* Baby Pink & Light Green — soft pastel floral */
+  --color-bg:        #fff5f5;   /* baby pink tint */
+  --color-surface:   #f0f8f0;   /* light green tint */
+  --color-surface2:  #ffeef0;   /* soft pink */
+  --color-surface3:  #e8f5e8;   /* sage green */
 
-  --color-accent:    #c8922a;   /* turmeric gold */
-  --color-accent2:   #8b1a1a;   /* deep crimson */
-  --color-accent3:   #1a6b44;   /* pichwai forest green */
-  --color-accent4:   #7b5ea7;   /* royal violet */
+  --color-accent:    #d4707a;   /* rose pink */
+  --color-accent2:   #5a9a6a;   /* soft green */
+  --color-accent3:   #e89098;   /* light rose */
+  --color-accent4:   #3a8a5a;   /* deeper green */
 
-  --color-text:      #f2e0b0;   /* warm ivory */
-  --color-muted:     #8a7355;   /* aged parchment */
-  --color-border:    rgba(200, 146, 42, 0.22);
-  --color-border-strong: rgba(200, 146, 42, 0.55);
+  --color-text:      #2a1820;   /* dark plum brown */
+  --color-muted:     #8a7078;   /* dusty rose gray */
+  --color-border:    rgba(212, 112, 122, 0.2);
+  --color-border-strong: rgba(212, 112, 122, 0.4);
 
-  --color-glow:      rgba(200, 146, 42, 0.12);
-  --color-glow-strong: rgba(200, 146, 42, 0.35);
-  --color-glow-lotus: rgba(200, 146, 42, 0.5);
+  --color-glow:      rgba(212, 112, 122, 0.1);
+  --color-glow-strong: rgba(212, 112, 122, 0.25);
+  --color-glow-lotus: rgba(90, 154, 106, 0.3);
 }
 
 /* ── Keyframes ─────────────────────────────────────────────── */
@@ -60,11 +60,11 @@
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    var(--color-accent) 0%,
-    #f0d080 30%,
-    var(--color-accent) 50%,
-    #f0d080 70%,
-    var(--color-accent) 100%
+    #d4707a 0%,
+    #e89098 25%,
+    #5a9a6a 50%,
+    #e89098 75%,
+    #d4707a 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;

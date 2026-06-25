@@ -25,7 +25,7 @@ export default function VenueSection() {
         <motion.div
           variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}
           className="relative rounded-2xl overflow-hidden"
-          style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 40px rgba(200,146,42,0.08), 0 20px 50px rgba(0,0,0,0.4)' }}
+          style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 40px rgba(200,146,42,0.08), 0 20px 50px rgba(0,0,0,0.05)' }}
         >
           <PichwaiCorner size={56} className="absolute top-0 left-0 z-10" />
           <PichwaiCorner size={56} flip={{ x: true }} className="absolute top-0 right-0 z-10" />

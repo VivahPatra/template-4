@@ -39,7 +39,7 @@ export default function RSVPSection() {
         <motion.div
           variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}
           className="relative rounded-2xl p-10 text-center"
-          style={{ background: 'var(--color-bg)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 40px rgba(200,146,42,0.1), 0 20px 50px rgba(0,0,0,0.4)' }}
+          style={{ background: 'var(--color-bg)', border: '1px solid var(--color-border-strong)', boxShadow: '0 0 40px rgba(200,146,42,0.1), 0 20px 50px rgba(0,0,0,0.05)' }}
         >
           <PichwaiCorner size={52} className="absolute top-0 left-0" />
           <PichwaiCorner size={52} flip={{ x: true }} className="absolute top-0 right-0" />
