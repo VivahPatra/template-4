@@ -17,7 +17,7 @@ export default function InvitationSection() {
           className="text-center mb-14"
           variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}
         >
-          <motion.p variants={fadeUp} className="font-sans text-xs tracking-[0.4em] uppercase mb-4 glow-pulse" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>
+          <motion.p variants={fadeUp} className="font-sans text-xs tracking-[0.4em] uppercase mb-4 glow-pulse" style={{ color: '#3a2018' }}>
             <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} /> &nbsp; {weddingData.invitationSubtitle || 'Shubh Vivah'} &nbsp; <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} />
           </motion.p>
           <motion.h2 variants={fadeUp} className="font-display shimmer-text" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)' }}>
@@ -102,7 +102,7 @@ export default function InvitationSection() {
               {weddingData.invitationText}
             </p>
             <LotusDivider className="my-8" />
-            <p className="font-sans text-sm tracking-widest uppercase" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>
+            <p className="font-sans text-sm tracking-widest uppercase" style={{ color: '#3a2018' }}>
               {formatShortDate(weddingData.weddingDate)}
             </p>
           </div>

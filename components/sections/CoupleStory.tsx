@@ -12,7 +12,7 @@ export default function CoupleStory() {
       <FlowerOverlay />
       <div className="max-w-5xl mx-auto">
         <motion.div className="text-center mb-14" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
-          <motion.p variants={fadeUp} className="font-sans text-xs tracking-[0.4em] uppercase mb-4 glow-pulse" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>
+          <motion.p variants={fadeUp} className="font-sans text-xs tracking-[0.4em] uppercase mb-4 glow-pulse" style={{ color: '#3a2018' }}>
             <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} /> &nbsp; Their Journey &nbsp; <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} />
           </motion.p>
           <motion.h2 variants={fadeUp} className="font-display shimmer-text" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)' }}>
@@ -54,8 +54,8 @@ export default function CoupleStory() {
                       </motion.div>
                     )}
                     {/* Text */}
-                    <p className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-accent)', opacity: 0.65 }}>{milestone.date}</p>
-                    <h3 className="font-display text-2xl mb-2 glow-text" style={{ color: 'var(--color-accent)' }}>{milestone.title}</h3>
+                    <p className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: '#3a2018' }}>{milestone.date}</p>
+                    <h3 className="font-display text-2xl mb-2 glow-text" style={{ color: '#fff' }}>{milestone.title}</h3>
                     <p className="font-serif text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>{milestone.description}</p>
                   </div>
 

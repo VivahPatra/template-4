@@ -27,7 +27,7 @@ export default function RSVPSection() {
 
       <div className="max-w-2xl mx-auto relative z-10">
         <motion.div className="text-center mb-14" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
-          <motion.p variants={fadeUp} className="font-sans text-xs tracking-[0.4em] uppercase mb-4 glow-pulse" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>
+          <motion.p variants={fadeUp} className="font-sans text-xs tracking-[0.4em] uppercase mb-4 glow-pulse" style={{ color: '#3a2018' }}>
             <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} /> &nbsp; Your Presence &nbsp; <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} />
           </motion.p>
           <motion.h2 variants={fadeUp} className="font-display shimmer-text" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)' }}>
@@ -49,7 +49,7 @@ export default function RSVPSection() {
           <p className="font-serif text-base leading-relaxed mb-3" style={{ color: 'var(--color-muted)' }}>
             {weddingData.rsvpText || 'We joyfully request the honour of your presence at our wedding celebration.'}
           </p>
-          <p className="font-sans text-sm mb-8" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>
+          <p className="font-sans text-sm mb-8" style={{ color: '#3a2018' }}>
             Please RSVP by {weddingData.rsvpDeadline || weddingData.rsvp.deadline}
           </p>
 
