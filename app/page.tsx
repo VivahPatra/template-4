@@ -18,6 +18,7 @@ import GallerySection from '@/components/sections/GallerySection'
 import RSVPSection from '@/components/sections/RSVPSection'
 import CountdownSection from '@/components/sections/CountdownSection'
 import FooterSection from '@/components/sections/FooterSection'
+import SectionGate from '@/components/ui/SectionGate'
 
 const LOTUS_IMAGE = '/assets/lotus.png'
 
@@ -37,41 +38,57 @@ export default function Page() {
           <div className="relative overflow-x-hidden">
 
             <main>
-              <HeroSection />
-              <LotusPondStrip bgColor="var(--color-bg)" lotusImage={LOTUS_IMAGE} />
-              <LotusWaveDivider fromColor="var(--color-bg)" toColor="var(--color-surface)" />
-              <ShowerDivider />
+              <SectionGate name="hero">
+                <HeroSection />
+                <LotusPondStrip bgColor="var(--color-bg)" lotusImage={LOTUS_IMAGE} />
+                <LotusWaveDivider fromColor="var(--color-bg)" toColor="var(--color-surface)" />
+                <ShowerDivider />
+              </SectionGate>
 
-              <InvitationSection />
-              <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
-              <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface2)" />
-              <ShowerDivider />
+              <SectionGate name="invitation">
+                <InvitationSection />
+                <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
+                <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface2)" />
+                <ShowerDivider />
+              </SectionGate>
 
-              <EventsSection />
-              <LotusPondStrip bgColor="var(--color-surface2)" lotusImage={LOTUS_IMAGE} />
-              <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
-              <ShowerDivider />
+              <SectionGate name="events">
+                <EventsSection />
+                <LotusPondStrip bgColor="var(--color-surface2)" lotusImage={LOTUS_IMAGE} />
+                <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
+                <ShowerDivider />
+              </SectionGate>
 
-              <CoupleStory />
-              <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
-              <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface2)" />
-              <ShowerDivider />
+              <SectionGate name="coupleStory">
+                <CoupleStory />
+                <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
+                <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface2)" />
+                <ShowerDivider />
+              </SectionGate>
 
-              <GallerySection />
-              <LotusPondStrip bgColor="var(--color-surface2)" lotusImage={LOTUS_IMAGE} />
-              <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
-              <ShowerDivider />
+              <SectionGate name="gallery">
+                <GallerySection />
+                <LotusPondStrip bgColor="var(--color-surface2)" lotusImage={LOTUS_IMAGE} />
+                <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
+                <ShowerDivider />
+              </SectionGate>
 
-              <RSVPSection />
-              <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
-              <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-bg)" />
-              <ShowerDivider />
+              <SectionGate name="rsvp">
+                <RSVPSection />
+                <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
+                <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-bg)" />
+                <ShowerDivider />
+              </SectionGate>
 
-              <CountdownSection />
-              <LotusPondStrip bgColor="var(--color-bg)" lotusImage={LOTUS_IMAGE} />
-              <LotusWaveDivider fromColor="var(--color-bg)" toColor="var(--color-surface2)" />
+              <SectionGate name="countdown">
+                <CountdownSection />
+                <LotusPondStrip bgColor="var(--color-bg)" lotusImage={LOTUS_IMAGE} />
+                <LotusWaveDivider fromColor="var(--color-bg)" toColor="var(--color-surface2)" />
+              </SectionGate>
 
-              <FooterSection />
+              <SectionGate name="footer">
+                <FooterSection />
+              </SectionGate>
             </main>
           </div>
         </>
