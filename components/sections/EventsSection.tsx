@@ -97,12 +97,12 @@ function EventNode({
 
       {/* Detail panel — always visible */}
       <div
-        className="text-center mt-3 rounded-xl px-3 py-3"
+        className="text-center mt-3 rounded-xl px-4 py-4"
         style={{
-          maxWidth: 160,
-          background: 'var(--color-surface)',
-          border: `1px solid ${color}33`,
-          boxShadow: `0 0 14px ${color}1a`,
+          maxWidth: 180,
+          background: '#fff',
+          border: `1.5px solid ${color}30`,
+          boxShadow: `0 4px 16px rgba(0,0,0,0.06)`,
         }}
       >
         <p className="font-serif text-sm" style={{ color: 'var(--color-text)', opacity: 0.85 }}>
