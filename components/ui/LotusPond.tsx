@@ -44,7 +44,7 @@ export default function LotusPond({ className = '' }: { className?: string; lotu
         className="absolute bottom-0 left-0 right-0"
         style={{
           height: '40%',
-          background: 'linear-gradient(180deg, transparent 0%, rgba(10,30,50,0.6) 40%, rgba(8,20,38,0.85) 100%)',
+          background: 'linear-gradient(180deg, transparent 0%, rgba(200,140,90,0.3) 40%, rgba(200,140,90,0.55) 100%)',
         }}
       />
 
