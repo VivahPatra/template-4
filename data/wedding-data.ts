@@ -22,19 +22,19 @@ export const weddingData: WeddingConfig = {
   ],
 
   galleryImages: [
-    { src: '/assets/gallery/g1.jpg', alt: 'Couple photo 1', span: 'wide' },
-    { src: '/assets/gallery/g2.jpg', alt: 'Couple photo 2', span: 'tall' },
-    { src: '/assets/gallery/g3.jpg', alt: 'Couple photo 3', span: 'normal' },
-    { src: '/assets/gallery/g4.jpg', alt: 'Couple photo 4', span: 'normal' },
-    { src: '/assets/gallery/g5.jpg', alt: 'Couple photo 5', span: 'wide' },
-    { src: '/assets/gallery/g6.jpg', alt: 'Couple photo 6', span: 'normal' },
+    { src: '/assets/gallery/gallery-1.jpg', alt: 'Couple photo 1', span: 'wide' },
+    { src: '/assets/gallery/gallery-2.jpg', alt: 'Couple photo 2', span: 'tall' },
+    { src: '/assets/gallery/gallery-3.jpg', alt: 'Couple photo 3', span: 'normal' },
+    { src: '/assets/gallery/gallery-4.jpg', alt: 'Couple photo 4', span: 'normal' },
+    { src: '/assets/gallery/gallery-5.jpg', alt: 'Couple photo 5', span: 'wide' },
+    { src: '/assets/gallery/gallery-6.jpg', alt: 'Couple photo 6', span: 'normal' },
   ],
 
   coupleStory: [
-    { date: 'March 2019', title: 'First Meeting', description: 'Like the divine meeting at Vrindavan, their eyes met across a room full of strangers and everything else faded away.', icon: '🌸', image: '/assets/story/s1.jpg' },
-    { date: 'August 2020', title: 'First Date', description: 'A rooftop at sunset, marigold garlands and three hours of conversation that felt like a lifetime.', icon: '🪔', image: '/assets/story/s2.jpg' },
-    { date: 'February 2023', title: 'The Proposal', description: 'Beneath a canopy of jasmine in Jaipur, a ring and a promise — this love, like the divine, eternal and boundless.', icon: '💍', image: '/assets/story/s3.jpg' },
-    { date: 'December 2026', title: 'Forever Begins', description: 'The greatest story ever written. We cannot wait to celebrate with every soul who has journeyed with us.', icon: '🏵️', image: '/assets/story/s4.jpg' },
+    { date: 'March 2019', title: 'First Meeting', description: 'Like the divine meeting at Vrindavan, their eyes met across a room full of strangers and everything else faded away.', icon: '🌸', image: '/assets/story/story-1.jpg' },
+    { date: 'August 2020', title: 'First Date', description: 'A rooftop at sunset, marigold garlands and three hours of conversation that felt like a lifetime.', icon: '🪔', image: '/assets/story/story-2.jpg' },
+    { date: 'February 2023', title: 'The Proposal', description: 'Beneath a canopy of jasmine in Jaipur, a ring and a promise — this love, like the divine, eternal and boundless.', icon: '💍', image: '/assets/story/story-3.jpg' },
+    { date: 'December 2026', title: 'Forever Begins', description: 'The greatest story ever written. We cannot wait to celebrate with every soul who has journeyed with us.', icon: '🏵️', image: '/assets/story/story-4.jpg' },
   ],
 
   familyBride: [
