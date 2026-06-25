@@ -50,11 +50,11 @@ export default function HeroSection() {
           src="/assets/pichwai-bg.png"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'brightness(0.28) saturate(0.65) sepia(0.35)' }}
+          style={{ filter: 'brightness(0.6) saturate(0.8) sepia(0.2)' }}
           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
         />
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(180deg, rgba(255,248,244,0.7) 0%, rgba(255,248,244,0.3) 35%, rgba(255,248,244,0.5) 75%, rgba(255,248,244,0.95) 100%)'
+          background: 'linear-gradient(180deg, rgba(255,236,216,0.8) 0%, rgba(255,236,216,0.3) 35%, rgba(232,168,120,0.4) 70%, rgba(255,236,216,0.95) 100%)'
         }} />
       </motion.div>
 
