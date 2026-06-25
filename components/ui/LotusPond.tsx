@@ -10,18 +10,18 @@ interface PondLotus {
 }
 
 const LOTUSES: PondLotus[] = [
-  { x: '2%',  y: '60%', size: 70,  delay: 0.1, opacity: 0.50 },
-  { x: '8%',  y: '75%', size: 90,  delay: 0.2, opacity: 0.55 },
-  { x: '15%', y: '85%', size: 60,  delay: 0.8, opacity: 0.40 },
-  { x: '25%', y: '70%', size: 80,  delay: 0.4, opacity: 0.48 },
-  { x: '35%', y: '82%', size: 110, delay: 0.5, opacity: 0.50 },
-  { x: '45%', y: '75%', size: 75,  delay: 1.0, opacity: 0.45 },
-  { x: '55%', y: '85%', size: 65,  delay: 0.7, opacity: 0.42 },
-  { x: '65%', y: '72%', size: 95,  delay: 0.3, opacity: 0.55 },
-  { x: '75%', y: '82%', size: 55,  delay: 0.9, opacity: 0.40 },
-  { x: '85%', y: '68%', size: 85,  delay: 0.6, opacity: 0.50 },
-  { x: '93%', y: '80%', size: 70,  delay: 1.1, opacity: 0.45 },
-  { x: '98%', y: '90%', size: 50,  delay: 1.3, opacity: 0.35 },
+  { x: '2%',  y: '60%', size: 70,  delay: 0.1, opacity: 0.85 },
+  { x: '8%',  y: '75%', size: 90,  delay: 0.2, opacity: 0.90 },
+  { x: '15%', y: '85%', size: 60,  delay: 0.8, opacity: 0.75 },
+  { x: '25%', y: '70%', size: 80,  delay: 0.4, opacity: 0.80 },
+  { x: '35%', y: '82%', size: 110, delay: 0.5, opacity: 0.85 },
+  { x: '45%', y: '75%', size: 75,  delay: 1.0, opacity: 0.78 },
+  { x: '55%', y: '85%', size: 65,  delay: 0.7, opacity: 0.76 },
+  { x: '65%', y: '72%', size: 95,  delay: 0.3, opacity: 0.90 },
+  { x: '75%', y: '82%', size: 55,  delay: 0.9, opacity: 0.75 },
+  { x: '85%', y: '68%', size: 85,  delay: 0.6, opacity: 0.85 },
+  { x: '93%', y: '80%', size: 70,  delay: 1.1, opacity: 0.78 },
+  { x: '98%', y: '90%', size: 50,  delay: 1.3, opacity: 0.70 },
 ]
 
 const PADS = [
@@ -44,7 +44,7 @@ export default function LotusPond({ className = '' }: { className?: string; lotu
         className="absolute bottom-0 left-0 right-0"
         style={{
           height: '40%',
-          background: 'linear-gradient(180deg, transparent 0%, rgba(135,206,235,0.3) 40%, rgba(100,180,220,0.5) 100%)',
+          background: 'linear-gradient(180deg, transparent 0%, transparent 40%, transparent 100%)',
         }}
       />
 
@@ -52,7 +52,7 @@ export default function LotusPond({ className = '' }: { className?: string; lotu
         <motion.div
           key={`water-line-${i}`}
           className="absolute left-0 right-0 h-px"
-          style={{ top: `${pct}%`, background: 'linear-gradient(to right, transparent, rgba(100,180,220,0.3), transparent)' }}
+          style={{ top: `${pct}%`, background: 'linear-gradient(to right, transparent, rgba(200,146,42,0.2), transparent)' }}
           animate={{ scaleX: [0.8, 1.05, 0.8], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 4 + i * 0.8, repeat: Infinity, delay: i * 0.5, ease: 'easeInOut' }}
         />

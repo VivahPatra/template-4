@@ -108,12 +108,12 @@
   animation: ganeshBackdrop 2.5s ease-in-out infinite;
 }
 
-/* White text on pink surface sections */
-.on-pink { color: #fff; }
+/* Dark text on pink surface sections */
+.on-pink { color: #1a0a08; }
 .on-pink .shimmer-text {
-  background: linear-gradient(90deg, #fff 0%, #fde8c8 30%, #fff 50%, #fde8c8 70%, #fff 100%);
+  background: linear-gradient(90deg, #1a0a08 0%, #3a2018 30%, #1a0a08 50%, #3a2018 70%, #1a0a08 100%);
   background-size: 200% auto;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.on-pink .glow-pulse { color: #fde8c8; }
+.on-pink .glow-pulse { color: #3a2018; }
