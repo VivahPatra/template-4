@@ -69,7 +69,7 @@ export default function LotusPond({ className = '' }: { className?: string; lotu
             animate={{ scale: 1, opacity: 0.5 }}
             transition={{ duration: 1, delay: pad.delay, ease: [0.22, 1, 0.36, 1] }}
           >
-            <img src="/assets/leaf.png" alt=""
+            <img src="/assets/leaf.png" alt="" onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
               style={{ width: pad.r * 2, height: 'auto', filter: 'brightness(1)', transform: pad.flip ? 'scaleX(-1)' : undefined }} />
           </motion.div>
         ))}
