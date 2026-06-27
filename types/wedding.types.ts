@@ -58,5 +58,6 @@ export interface WeddingConfig {
   rsvp: { whatsappNumber: string; message: string; deadline: string }
   socialLinks?: { instagram?: string }
   infoCards?: Array<{ icon: string; title: string; description: string }>
+  groomFirst?: boolean
   sections?: Record<string, boolean>
 }
