@@ -15,6 +15,7 @@ import InvitationSection from '@/components/sections/InvitationSection'
 import EventsSection from '@/components/sections/EventsSection'
 import CoupleStory from '@/components/sections/CoupleStory'
 import GallerySection from '@/components/sections/GallerySection'
+import VenueSection from '@/components/sections/VenueSection'
 import RSVPSection from '@/components/sections/RSVPSection'
 import CountdownSection from '@/components/sections/CountdownSection'
 import FooterSection from '@/components/sections/FooterSection'
@@ -70,6 +71,13 @@ export default function Page() {
                 <GallerySection />
                 <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
                 <LotusWaveDivider fromColor="var(--color-surface2)" toColor="var(--color-surface)" />
+                <ShowerDivider />
+              </SectionGate>
+
+              <SectionGate name="venue">
+                <VenueSection />
+                <LotusPondStrip bgColor="var(--color-surface)" lotusImage={LOTUS_IMAGE} />
+                <LotusWaveDivider fromColor="var(--color-surface)" toColor="var(--color-surface)" />
                 <ShowerDivider />
               </SectionGate>
 
