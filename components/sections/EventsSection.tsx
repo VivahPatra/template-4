@@ -150,7 +150,7 @@ export default function EventsSection() {
             className="font-sans text-xs tracking-[0.4em] uppercase mb-4 glow-pulse"
             style={{ color: 'var(--color-accent)', opacity: 0.7 }}
           >
-            <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} /> &nbsp; The Celebrations &nbsp; <img src="/assets/lotus.png" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} />
+            <img src="/assets/lotus.webp" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} /> &nbsp; The Celebrations &nbsp; <img src="/assets/lotus.webp" alt="" style={{ width: 34, height: 'auto', display: 'inline', verticalAlign: 'middle', filter: 'brightness(1.4)' }} />
           </motion.p>
           <motion.h2
             variants={fadeUp}

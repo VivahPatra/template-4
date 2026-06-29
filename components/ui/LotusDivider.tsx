@@ -12,7 +12,7 @@ export default function LotusDivider({ className = '' }: Props) {
         <rect x="108" y="1.5" width="5" height="5" fill="var(--color-accent)" opacity="0.6" transform="rotate(45 110.5 4)" />
       </svg>
 
-      <img src="/assets/lotus1.png" alt="" style={{ width: 36, height: 'auto', filter: 'brightness(1.4)' }} />
+      <img src="/assets/lotus1.webp" alt="" style={{ width: 36, height: 'auto', filter: 'brightness(1.4)' }} />
 
       {/* Right rule */}
       <svg viewBox="0 0 120 8" width="120" height="8" aria-hidden>

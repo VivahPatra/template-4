@@ -74,7 +74,7 @@ export default function LoadingScreen({ onComplete }: Props) {
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           style={{ filter: 'drop-shadow(0 0 16px var(--color-glow-strong))' }}
         >
-          <img src="/assets/lotus.png" alt="" style={{ width: 64, height: 'auto', filter: 'brightness(1.4)' }} />
+          <img src="/assets/lotus.webp" alt="" style={{ width: 64, height: 'auto', filter: 'brightness(1.4)' }} />
         </motion.div>
       </div>
 

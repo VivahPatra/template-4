@@ -21,7 +21,7 @@ import CountdownSection from '@/components/sections/CountdownSection'
 import FooterSection from '@/components/sections/FooterSection'
 import SectionGate from '@/components/ui/SectionGate'
 
-const LOTUS_IMAGE = '/assets/lotus.png'
+const LOTUS_IMAGE = '/assets/lotus.webp'
 
 export default function Page() {
   const [loaded, setLoaded] = useState(false)

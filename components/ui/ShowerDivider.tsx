@@ -37,7 +37,7 @@ export default function ShowerDivider({ count = 14 }: { count?: number }) {
     <div ref={ref} aria-hidden style={{ position: 'relative', height: 0, overflow: 'visible', pointerEvents: 'none', zIndex: 20 }}>
       <style>{CSS}</style>
       {active && leaves.map(l => (
-        <img key={l.id} src="/assets/leaf-1.png" alt="" style={{
+        <img key={l.id} src="/assets/leaf-1.webp" alt="" style={{
           position: 'absolute',
           left: `${l.left}%`,
           top: 0,

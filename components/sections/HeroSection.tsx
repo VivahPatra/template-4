@@ -39,7 +39,7 @@ export default function HeroSection() {
         >
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div className="ganesha-backdrop" style={{ position: 'absolute', inset: '-15%', borderRadius: '50%', background: 'radial-gradient(circle, rgba(136,14,79,0.4) 0%, rgba(232,130,90,0.25) 50%, transparent 75%)', filter: 'blur(20px)' }} />
-            <img src="/assets/sriji.png" alt="" className="ganesha-glow" style={{ width: '100%', height: 'auto', position: 'relative', zIndex: 1 }} />
+            <img src="/assets/sriji.webp" alt="" className="ganesha-glow" style={{ width: '100%', height: 'auto', position: 'relative', zIndex: 1 }} />
           </div>
         </motion.div>
       </motion.div>
@@ -47,7 +47,7 @@ export default function HeroSection() {
       {/* Background image */}
       <motion.div className="absolute inset-0" style={{ y: bgY, scale: bgScale }}>
         <img
-          src="/assets/pichwai-bg.png"
+          src="/assets/pichwai-bg.webp"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'brightness(0.6) saturate(0.8) sepia(0.2)' }}
@@ -79,7 +79,7 @@ export default function HeroSection() {
       <motion.div className="relative z-10 flex justify-center mb-4" style={{ y: srijiY, opacity }}>
         <div style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
           <div className="ganesha-backdrop" style={{ position: 'absolute', inset: -10, borderRadius: '50%', background: 'radial-gradient(circle, rgba(136,14,79,0.4) 0%, rgba(232,130,90,0.25) 50%, transparent 75%)', filter: 'blur(14px)' }} />
-          <img src="/assets/sriji.png" alt="" className="ganesha-glow" style={{ width: 140, height: 'auto', position: 'relative', zIndex: 1 }} />
+          <img src="/assets/sriji.webp" alt="" className="ganesha-glow" style={{ width: 140, height: 'auto', position: 'relative', zIndex: 1 }} />
         </div>
       </motion.div>
 
@@ -101,7 +101,7 @@ export default function HeroSection() {
 
         <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 my-4">
           <div className="h-px w-12 md:w-24" style={{ background: 'linear-gradient(to right, transparent, var(--color-accent))' }} />
-          <img src="/assets/lotus1.png" alt="" style={{ width: 36, height: 'auto', filter: 'brightness(1.4)' }} />
+          <img src="/assets/lotus1.webp" alt="" style={{ width: 36, height: 'auto', filter: 'brightness(1.4)' }} />
           <div className="h-px w-12 md:w-24" style={{ background: 'linear-gradient(to left, transparent, var(--color-accent))' }} />
         </motion.div>
 
@@ -143,12 +143,12 @@ export default function HeroSection() {
         className="relative z-[8] flex justify-between w-full px-0 mt-4 mb-16"
         style={{ y: cowY, opacity }}
       >
-        <motion.img src="/assets/cow.png" alt="" className="w-[120px] sm:w-[240px] md:w-[200px]"
+        <motion.img src="/assets/cow.webp" alt="" className="w-[120px] sm:w-[240px] md:w-[200px]"
           style={{ height: 'auto', filter: 'brightness(1.2)', opacity: 0.85 }}
           animate={{ y: [0, -6, 0], rotate: [-1, 1, -1] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         />
-        <motion.img src="/assets/cow.png" alt="" className="w-[120px] sm:w-[240px] md:w-[200px]"
+        <motion.img src="/assets/cow.webp" alt="" className="w-[120px] sm:w-[240px] md:w-[200px]"
           style={{ height: 'auto', filter: 'brightness(1.2)', opacity: 0.85, scaleX: -1 }}
           animate={{ y: [0, -6, 0], rotate: [1, -1, 1] }}
           transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
